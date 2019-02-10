@@ -3,58 +3,58 @@ package model;
 import java.time.LocalDateTime;
 
 public class Project {
-    private String projectname;
-    private String projectdescription;
-    private LocalDateTime projectdatecreate;
-    private double projectsumm;
-    private double projectcurrentsumm;
-    private String projectphoto;
+    private String projectName;
+    private String projectDescription;
+    private LocalDateTime projectDateCreate;
+    private double projectSumm;
+    private double projectCurrentSumm;
+    private String projectPhoto;
 
-    public String getProjectname() {
-        return projectname;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setProjectname(String projectname) {
-        this.projectname = projectname;
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 
-    public String getProjectdescription() {
-        return projectdescription;
+    public String getProjectDescription() {
+        return projectDescription;
     }
 
-    public void setProjectdescription(String projectdescription) {
-        this.projectdescription = projectdescription;
+    public void setProjectDescription(String projectDescription) {
+        this.projectDescription = projectDescription;
     }
 
-    public LocalDateTime getProjectdatecreate() {
-        return projectdatecreate;
+    public LocalDateTime getProjectDateCreate() {
+        return projectDateCreate;
     }
 
-    public void setProjectdatecreate(LocalDateTime projectdatecreate) {
-        this.projectdatecreate = projectdatecreate;
+    public void setProjectDateCreate(LocalDateTime projectDateCreate) {
+        this.projectDateCreate = projectDateCreate;
     }
 
-    public double getProjectsumm() {
-        return projectsumm;
+    public double getProjectSumm() {
+        return projectSumm;
     }
 
-    public void setProjectsumm(double projectsumm) {
-        this.projectsumm = projectsumm;
+    public void setProjectSumm(double projectSumm) {
+        this.projectSumm = projectSumm;
     }
 
-    public double getProjectcurrentsumm() {
-        return projectcurrentsumm;
+    public double getProjectCurrentSumm() {
+        return projectCurrentSumm;
     }
 
-    public void setProjectcurrentsumm(double projectcurrentsumm) {
-        this.projectcurrentsumm = projectcurrentsumm;
+    public void setProjectCurrentSumm(double projectCurrentSumm) {
+        this.projectCurrentSumm = projectCurrentSumm;
     }
 
-    public String getProjectphoto() {
-        return projectphoto;
+    public String getProjectPhoto() {
+        return projectPhoto;
     }
 
-    public void setProjectphoto(String projectphoto) {
-        this.projectphoto = projectphoto;
+    public void setProjectPhoto(String projectPhoto) {
+        this.projectPhoto = projectPhoto;
     }
 }

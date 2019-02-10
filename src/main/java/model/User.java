@@ -1,30 +1,43 @@
 package model;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
-    private int userid;
-    private String username;
-    private String useraddress;
+    private int userId;
+    private String userName;
+    private String userAddress;
+    private List<String> context = new ArrayList<>();
 
-    public int getUserid() {
-        return userid;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUserid(int userid) {
-        this.userid = userid;
+    public void setUserId(int userid) {
+        this.userId = userId;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String username) {
+        this.userName = userName;
     }
 
-    public String getUseraddress() {
-        return useraddress;
+    public String getUserAddress() {
+        return userAddress;
     }
 
-    public void setUseraddress(String useraddress) {
-        this.useraddress = useraddress;
+    public void setUserAddress(String useraddress) {
+        this.userAddress = userAddress;
+    }
+
+    public List<String> getContext() {
+        return context;
+    }
+
+    public void setContext(List<String> context) {
+        this.context = context;
     }
 }
