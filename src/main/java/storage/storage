@@ -1,0 +1,15 @@
+константы public static final map users
+хранилище данных.
+
+class Storage {
+user {
+user_id
+user_name
+}
+
+
+getUserId(){
+return id;
+}
+
+}
