@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/urbansocializerbot.iml" filepath="$PROJECT_DIR$/urbansocializerbot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/urban.socializer.bot.iml" filepath="$PROJECT_DIR$/urban.socializer.bot.iml" />
     </modules>
   </component>
 </project>
