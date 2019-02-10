@@ -6,8 +6,8 @@ public class Project {
     private String projectName;
     private String projectDescription;
     private LocalDateTime projectDateCreate;
-    private double projectSumm;
-    private double projectCurrentSumm;
+    private double projectSum;
+    private double projectCurrentSum;
     private String projectPhoto;
 
     public String getProjectName() {
@@ -34,20 +34,20 @@ public class Project {
         this.projectDateCreate = projectDateCreate;
     }
 
-    public double getProjectSumm() {
-        return projectSumm;
+    public double getProjectSum() {
+        return projectSum;
     }
 
-    public void setProjectSumm(double projectSumm) {
-        this.projectSumm = projectSumm;
+    public void setProjectSum(double projectSumm) {
+        this.projectSum = projectSumm;
     }
 
-    public double getProjectCurrentSumm() {
-        return projectCurrentSumm;
+    public double getProjectCurrentSum() {
+        return projectCurrentSum;
     }
 
-    public void setProjectCurrentSumm(double projectCurrentSumm) {
-        this.projectCurrentSumm = projectCurrentSumm;
+    public void setProjectCurrentSum(double projectCurrentSumm) {
+        this.projectCurrentSum = projectCurrentSumm;
     }
 
     public String getProjectPhoto() {
