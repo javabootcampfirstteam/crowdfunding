@@ -7,6 +7,6 @@ import java.util.Map;
 
 public class UserStorage {
 
-	Map<Integer, BotUser> user = new HashMap<Integer, BotUser>();
+	public Map<Integer, BotUser> user = new HashMap<Integer, BotUser>();
 
 }
