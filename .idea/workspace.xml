@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65ab9397-040c-449e-861c-8d3fd9772963" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/abstr/BotUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/UrbanSocializerBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/UrbanSocializerBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/storage/UserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/storage/UserStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UrbanSocializerBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UrbanSocializerBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/abstr/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/abstr/BotUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/abstr/BotUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/dao" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/BotUserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/BotUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/BotUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/UserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/storage/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/storage" beforeDir="false" />
-    </list>
+    <list default="true" id="65ab9397-040c-449e-861c-8d3fd9772963" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +81,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/BotUserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
+            <state relative-caret-position="460">
               <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -271,7 +256,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549893665446" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549893668376" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -322,7 +307,7 @@
       <option name="presentableId" value="Default" />
       <updated>1549816815739</updated>
       <workItem from="1549816820533" duration="15446000" />
-      <workItem from="1549874145226" duration="16084000" />
+      <workItem from="1549874145226" duration="16243000" />
     </task>
     <task id="LOCAL-00001" summary="camel case letters and user context">
       <created>1549817373816</created>
@@ -349,7 +334,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31530000" />
+    <option name="totallyTimeSpent" value="31689000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -554,7 +539,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/BotUserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
+        <state relative-caret-position="460">
           <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
