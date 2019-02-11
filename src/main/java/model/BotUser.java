@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class BotUser {
     private int userId;
     private String userName;
     private String userAddress;

@@ -49,7 +49,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot{
 			}
 			try {
 				//execute(animation);
-				execute(message);  // Sending our message object to user
+				execute(message);  // Sending our message object to USERSTABLE
 			} catch (TelegramApiException e) {
 				e.printStackTrace();
 			}

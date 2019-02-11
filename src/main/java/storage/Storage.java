@@ -5,8 +5,8 @@ import model.BotUser;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UserStorage {
+public class Storage {
 
-	public Map<Integer, BotUser> user = new HashMap<Integer, BotUser>();
+	public static final Map<Integer, BotUser> USERSTABLE = new HashMap<Integer, BotUser>();
 
 }

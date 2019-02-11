@@ -3,6 +3,8 @@ import org.telegram.telegrambots.bots.DefaultBotOptions;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
 
+import java.io.IOException;
+
 public class Main {
 
 
@@ -23,6 +25,8 @@ public class Main {
 
 		}
 		catch (TelegramApiRequestException e){
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
