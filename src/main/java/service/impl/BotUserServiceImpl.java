@@ -39,4 +39,9 @@ public class BotUserServiceImpl implements BotUserService {
 		return false;
 	}
 
+	@Override
+	public Integer getUserContextById(BotUser botUser) {
+		return botUser.getUserId();
+	}
+
 }

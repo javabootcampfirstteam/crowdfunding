@@ -8,8 +8,8 @@ import java.io.IOException;
 public class Main {
 
 
-	private static String PROXY_HOST = "5.8.18.84";
-	private static Integer PROXY_PORT = 16145;
+	private static String PROXY_HOST = "61.19.201.13";
+	private static Integer PROXY_PORT = 8080;
 
 
 	public static void main(String[] args) {

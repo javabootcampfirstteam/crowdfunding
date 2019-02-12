@@ -1,2 +1,3 @@
 todo  создать предложения на голосование.
 todo просмотреть список проектов. (количество голосов)
+todo if user send /start and user ar already exist, bot send-back to user his name from hashmap, else bot set user id and name to hash map

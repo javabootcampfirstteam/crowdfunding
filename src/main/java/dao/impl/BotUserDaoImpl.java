@@ -22,7 +22,7 @@ public class BotUserDaoImpl implements BotUserDao {
 
     @Override
     public void addUser(BotUser botUser, Integer id) {
-        Storage.USERSTABLE.put(id,botUser);
+        Storage.USERS_TABLE.put(id,botUser);
     }
 
 }
