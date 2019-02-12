@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BotUser {
-    private int userId;
+    private Integer userId;
     private String userName;
     private String userAddress;
     private List<String> context = new ArrayList<>();
-
-    public int getUserId() {
+    private  boolean notificationModeOn;
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -39,5 +39,13 @@ public class BotUser {
 
     public void setContext(List<String> context) {
         this.context = context;
+    }
+
+    public boolean isNotificationModeOn() {
+        return notificationModeOn;
+    }
+
+    public void setNotificationModeOn(boolean notificationModeOn) {
+        this.notificationModeOn = notificationModeOn;
     }
 }
