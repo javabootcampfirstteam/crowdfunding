@@ -1,48 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5faf939c-e07f-4f77-8df2-dbf787448bc1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+    <list default="true" id="5faf939c-e07f-4f77-8df2-dbf787448bc1" name="Default Changelist" comment="reg commit part 3">
+      <change afterPath="$PROJECT_DIR$/src/main/java/bot/Bot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bot/BotOptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/UrbanSocializerBot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/abstr/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/dao/dao" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/impl/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/model/BotUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/model/model" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/service/service" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/storage/UserStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/storage/storage" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/.idea/main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UrbanSocializerBot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/abstr/BotUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/abstr/BotUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/BotUserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/BotUserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/BotUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/BotUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Project.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ProjectStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/abstr/BotUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/abstr/BotUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/BotUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/BotUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/service" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/storage/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/giphy.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/urban.socializer.bot.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/giphy.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/urban.socializer.bot.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/urbansocializerbot.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,10 +28,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/storage/Storage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-              <folding>
-                <element signature="e#255#263#0" expanded="true" />
-              </folding>
+              <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -77,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1485">
-              <caret line="113" column="25" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
+            <state relative-caret-position="561">
+              <caret line="52" column="116" selection-start-line="52" selection-start-column="116" selection-end-line="52" selection-end-column="116" />
               <folding>
                 <element signature="e#5475#5476#0" expanded="true" />
                 <element signature="e#5506#5507#0" expanded="true" />
@@ -103,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/ArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="141" column="16" selection-start-line="141" selection-start-column="16" selection-end-line="141" selection-end-column="16" />
+            <state relative-caret-position="142">
+              <caret line="432" selection-start-line="432" selection-end-line="432" />
             </state>
           </provider>
         </entry>
@@ -112,8 +71,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/BotUserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="171">
+              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+              <folding>
+                <element signature="e#454#455#0" expanded="true" />
+                <element signature="e#504#505#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,6 +93,7 @@
         <option value="$PROJECT_DIR$/src/main/java/bot/BotOptions.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/storage/Storage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/impl/BotUserDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/bot/Bot.java" />
       </list>
     </option>
@@ -255,15 +219,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="kidinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="Context.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -275,7 +230,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550051194550" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550051843751" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -316,12 +271,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550013504875</updated>
-      <workItem from="1550013509091" duration="11543000" />
+      <workItem from="1550013509091" duration="12313000" />
     </task>
+    <task id="LOCAL-00001" summary="reg commit part 3">
+      <created>1550051298351</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1550051298351</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11543000" />
+    <option name="totallyTimeSpent" value="12313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -332,7 +295,7 @@
       <window_info id="Capture Tool" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -343,7 +306,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -363,6 +326,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="reg commit part 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="reg commit part 3" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/abstr/BotUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -375,13 +342,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/Context.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -406,13 +366,6 @@
           <folding>
             <element signature="e#539#540#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="141" column="16" selection-start-line="141" selection-start-column="16" selection-end-line="141" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -441,27 +394,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="432" selection-start-line="432" selection-end-line="432" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/storage/Storage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-          <folding>
-            <element signature="e#255#263#0" expanded="true" />
-          </folding>
+          <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/BotUserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        <state relative-caret-position="171">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+          <folding>
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kidinfo.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="113" column="25" selection-start-line="113" selection-start-column="25" selection-end-line="113" selection-end-column="25" />
+        <state relative-caret-position="561">
+          <caret line="52" column="116" selection-start-line="52" selection-start-column="116" selection-end-line="52" selection-end-column="116" />
           <folding>
             <element signature="e#5475#5476#0" expanded="true" />
             <element signature="e#5506#5507#0" expanded="true" />
