@@ -125,7 +125,9 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 							sendMsg(currentChatId, "неизвестная команда");
 						}
 
-					} else if(currentContext.) {
+					}
+				}
+				else if(currentContext.isEmpty()) {
 						switch (currentContext.get(contextPosition)) {
 							case "/regCity": {
 								if (currentContext.size() == ++contextPosition) {
@@ -166,7 +168,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 				}
 			}
 		}
-	}
+	
 
 
 	// просто тестовый метод
