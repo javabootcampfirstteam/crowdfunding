@@ -5,64 +5,57 @@ import java.util.List;
 
 public class BotUser {
 
-    private String name;
+	private Integer userId;
+	private String userName;
+	private String userAddress;
+	private int phoneNumber;
 
-    public BotUser(String name) {
-        this.name = name;
-    }
-    private Integer userId;
-    private String userName;
-    private String userAddress;
-    private String phoneNum;
-    private List<String> context = new ArrayList<>();
-    private boolean notificationModeOn;
+	public int getPhoneNumber() { return phoneNumber;
+	}
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+	public void setPhoneNumber(int phoneNumber) { this.phoneNumber = phoneNumber;
+	}
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
+	private List<String> context = new ArrayList<>();
+	private boolean notificationModeOn;
 
-    public void setNotificationModeOn(boolean notificationModeOn) {
-        this.notificationModeOn = notificationModeOn;
-    }
+	public Integer getUserId() {
+		return userId;
+	}
 
-    public String getUserName() {
-        return userName;
-    }
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 
-    public Integer getUserId() {
-        return userId;
-    }
+	public String getUserName() {
+		return userName;
+	}
 
-    public boolean isNotificationModeOn() {
-        return notificationModeOn;
-    }
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
-    }
+	public String getUserAddress() {
+		return userAddress;
+	}
 
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
-    }
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
+	}
 
-    public List<String> getContext() {
-        return context;
-    }
+	public List<String> getContext() {
+		return context;
+	}
 
-    public void setContext(List<String> context) {
-        this.context = context;
-    }
+	public void setContext(List<String> context) {
+		this.context = context;
+	}
 
-    public String getUserAddress() {
-        return userAddress;
-    }
+	public boolean isNotificationModeOn() {
+		return notificationModeOn;
+	}
 
-    public String getPhoneNum() {
-        return phoneNum;
-    }
-
+	public void setNotificationModeOn(boolean notificationModeOn) {
+		this.notificationModeOn = notificationModeOn;
+	}
 }
