@@ -7,17 +7,17 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class Main {
 
-    private static String PROXY_HOST = "193.112.46.246";
-    private static Integer PROXY_PORT = 21071 ;
+    private static String PROXY_HOST = "5.8.18.84";
+    private static Integer PROXY_PORT = 	18148 ;
 
     public static void main(String[] args) {
         ApiContextInitializer.init();
         TelegramBotsApi botapi = new TelegramBotsApi();
 
         DefaultBotOptions botOptions = ApiContext.getInstance(DefaultBotOptions.class);
-   //     botOptions.setProxyHost(PROXY_HOST);
-   //     botOptions.setProxyPort(PROXY_PORT);
-   //     botOptions.setProxyType(DefaultBotOptions.ProxyType.SOCKS5);
+        botOptions.setProxyHost(PROXY_HOST);
+        botOptions.setProxyPort(PROXY_PORT);
+        botOptions.setProxyType(DefaultBotOptions.ProxyType.SOCKS5);
 
         try {
             botapi.registerBot(new Bot(botOptions));
