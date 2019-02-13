@@ -125,7 +125,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 							sendMsg(currentChatId, "неизвестная команда");
 						}
 
-					} else  {
+					} else if(currentContext.) {
 						switch (currentContext.get(contextPosition)) {
 							case "/regCity": {
 								if (currentContext.size() == ++contextPosition) {
