@@ -4,48 +4,58 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BotUser {
-    private Integer userId;
-    private String userName;
-    private String userAddress;
-    private List<String> context = new ArrayList<>();
-    private  boolean notificationModeOn;
-    public Integer getUserId() {
-        return userId;
-    }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
+	private Integer userId;
+	private String userName;
+	private String userAddress;
+	private int phoneNumber;
 
-    public String getUserName() {
-        return userName;
-    }
+	public int getPhoneNumber() { return phoneNumber;
+	}
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+	public void setPhoneNumber(int phoneNumber) { this.phoneNumber = phoneNumber;
+	}
 
-    public String getUserAddress() {
-        return userAddress;
-    }
+	private List<String> context = new ArrayList<>();
+	private boolean notificationModeOn;
 
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
-    }
+	public Integer getUserId() {
+		return userId;
+	}
 
-    public List<String> getContext() {
-        return context;
-    }
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 
-    public void setContext(List<String> context) {
-        this.context = context;
-    }
+	public String getUserName() {
+		return userName;
+	}
 
-    public boolean isNotificationModeOn() {
-        return notificationModeOn;
-    }
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
-    public void setNotificationModeOn(boolean notificationModeOn) {
-        this.notificationModeOn = notificationModeOn;
-    }
+	public String getUserAddress() {
+		return userAddress;
+	}
+
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
+	}
+
+	public List<String> getContext() {
+		return context;
+	}
+
+	public void setContext(List<String> context) {
+		this.context = context;
+	}
+
+	public boolean isNotificationModeOn() {
+		return notificationModeOn;
+	}
+
+	public void setNotificationModeOn(boolean notificationModeOn) {
+		this.notificationModeOn = notificationModeOn;
+	}
 }
