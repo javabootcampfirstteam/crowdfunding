@@ -50,7 +50,7 @@ public class Bot extends TelegramLongPollingBot {
             if ("/start".equals(messageFromTelegram)) {
                 if (!botUserService.isUserExistById(currentUserId)) {
                     botUserService.addUser(currentUserId, new BotUser(telegramUserName));
-                    sendMsg(currentChatId, "Добрый день, вы впервые у нас, добавляем вас в базу\n" + currentUserId  );
+                    sendMsg(currentChatId, "Добрый день, вы впервые у нас, добавляем вас в базу\n");
                 } else {
                     sendMsg(currentChatId, "Привет " + telegramUserName + ", Мы уже знакомы с вами!");
                 }
@@ -61,31 +61,54 @@ public class Bot extends TelegramLongPollingBot {
                 BotUser currentUser = botUserService.getUser(currentUserId);
                 List<String> currentContext = currentUser.getContext();
 
-                if (!messageFromTelegram.isEmpty()){
-                    switch (currentContext.get(contextPosition)) {
+                if (currentContext.isEmpty()){
+                    switch (messageFromTelegram) {
                         case "/reg": {
                             sendMsg(currentChatId, "Пожалуйста укажите город где вы живете.");
-                            currentContext.set(contextPosition++,"/regCity");
+                            currentContext.add("/regCity");
                             break;
                         }
+                        case "/info": {
+                            sendMsg(currentChatId, "Информация");
+                            currentContext.add("/info");
+                            break;
+                        }
+                    }
+                } else {
+                    switch (currentContext.get(contextPosition)) {
                         case "/regCity": {
-                            String cityReg = message.getText();
-                            currentUser.setUserAddress(cityReg);
-                            sendMsg(currentChatId, "Пожалуйста укажите свой телефон.");
-                            currentContext.set(contextPosition++,"/regPhone");
-                            break;
-                        }
-                        case "/regPhone": {
-                            String phoneReg = message.getText();
-                            currentUser.setPhoneNum(phoneReg);
-                            sendMsg(currentChatId, "Добро пожаловать: " + telegramUserName + "\n"
-                                    + "из города " + currentUser.getUserAddress() + ", тел. номер: "
-                                    + currentUser.getPhoneNum());
-                            currentContext.set(contextPosition++, "/final");
-                            break;
-                        }
-                        case "/final": {
+                            if(currentContext.size() == ++contextPosition){
+                                sendMsg(currentChatId, "Пожалуйста укажите свой телефон.");
+                                currentContext.add("/regPhone");
+                            } else {
+                                switch (currentContext.get(contextPosition)){
+                                    case "/regPhone": {
+                                        if(currentContext.size() == ++contextPosition){
+                                            String cityReg = message.getText();
+                                            currentUser.setUserAddress(cityReg);
+                                            sendMsg(currentChatId, "Добро пожаловать: " + telegramUserName + "\n"
+                                                    + "из города " + currentUser.getUserAddress() + ", тел. номер: "
+                                                    + currentUser.getPhoneNum());
+                                            currentContext.add("/regFinal");
+                                        } else {
+                                            switch (currentContext.get(contextPosition)){
+                                                case "/regFinal": {
 
+                                                    break;
+                                                }
+                                            }
+                                        }
+
+
+                                        break;
+                                    }
+                                }
+                            }
+
+                            break;
+                        }
+                        case "/nomatter": {
+                            sendMsg(currentChatId, "Просто строка");
                             break;
                         }
 
@@ -98,25 +121,11 @@ public class Bot extends TelegramLongPollingBot {
                             sendMsg(currentChatId, "неизвестная команда");
                         }
                     }
-
-
-                } else {
-                  //  int contextPosition = 0;
-                    switch (currentContext.get(contextPosition++)) {
-
-                        case "/info": {
-                            break;
-                        }
-                        case "/list_activities": {
-                            // проверка роли
-                            sendMsg(currentChatId, "список");
-                            break;
-                        }
-                        default: {
-                            sendMsg(currentChatId, "неизвестная команда");
-                        }
-                    }
                 }
+
+
+
+//
 
 
             }
