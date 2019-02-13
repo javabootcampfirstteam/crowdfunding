@@ -51,10 +51,11 @@ public class Bot extends TelegramLongPollingBot {
                 if (!botUserService.isUserExistById(currentUserId)) {
                     botUserService.addUser(currentUserId, new BotUser(telegramUserName));
                     sendMsg(currentChatId, "Добрый день, вы впервые у нас, добавляем вас в базу\n" );
+                    sendMsg(currentChatId, "/reg - регистрация\n/info - информация");
                 } else {
                     sendMsg(currentChatId, "Привет " + telegramUserName + ", Мы уже знакомы с вами!");
+                    sendMsg(currentChatId, "/info - информация");
                 }
-                sendMsg(currentChatId, "/reg - регистрация\n/info - информация");
 
             } else {
 
@@ -73,22 +74,15 @@ public class Bot extends TelegramLongPollingBot {
                                     "Здесь вы можете предложить свой проект " +
                                     "по улучшению городской или районной инфраструктуры. /add_project\n"
                             + "или ознакомится с текущими предложениями. /list_project");
-                            break;
                         }
                         case "/list_project": {
                             currentContext.add("/list_project");
-                            break;
                         }
                         case "/add_project": {
                             currentContext.add("/add_project");
-                            break;
                         }
-
-
                     }
-
                 } else {
-
                     switch (currentContext.get(contextPosition)) {
                         case "/regCity": {
                             if (currentContext.size() == ++contextPosition) {
@@ -106,72 +100,28 @@ public class Bot extends TelegramLongPollingBot {
                                                     + "из города " + currentUser.getUserAddress() + ", тел. номер: "
                                                     + currentUser.getPhoneNum() + "\n");
                                             currentContext.clear();
-                                            //   currentContext.add("/start");
                                             sendMsg(currentChatId, "Благодарим за регистрацию. " +
                                                     "Теперь посмотрите что люди предлагают.\n /info");
-                                            //   break;
                                         }
-
-
-//                                        else {
-//                                            switch (currentContext.get(contextPosition)) {
-//                                                case "/list_project": {
-//                                                    if (currentContext.size() == ++contextPosition) {
-//                                                        sendMsg(currentChatId, "Здесь будут перечислены текущие проекты.");
-//                                                    //    currentContext.add("/list_project");
-//                                                        break;
-//                                                    }
-//                                                }
-//                                            }
-//                                        }
-
                                         break;
                                     }
                                 }
                             }
-
                             break;
                         }
-                    //}}}
-//                        case "/nomatter": {
-//                            sendMsg(currentChatId, "Просто строка");
-//                            break;
-//                        }
-
-//                        switch (currentContext.get(contextPosition)) {
-//                            case "/list_project": {
-//                                if (currentContext.size() == ++contextPosition) {
-//                                    sendMsg(currentChatId, "Здесь будут перечислены текущие проекты.");
-//                                    //currentContext.add("/list_project");
-//                                }else{
-
 
                         case "/list_project": {
                             sendMsg(currentChatId, "Здесь будут перечислены текущие проекты.");
                             break;
                         }
 
-
-
-
                         default: {
                             sendMsg(currentChatId, "неизвестная команда");
                         }
                     }
-
                 }
-
-
-
-
-//
-
-
             }
-
-
         }
-
     }
 
     public String getBotUsername() {

@@ -4,9 +4,6 @@
     <list default="true" id="5faf939c-e07f-4f77-8df2-dbf787448bc1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bot/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bot/BotOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bot/BotOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/BotUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/BotUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/storage/Storage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,12 +17,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="82" column="60" selection-start-line="82" selection-start-column="60" selection-end-line="82" selection-end-column="60" />
+            <state relative-caret-position="212">
+              <caret line="81" column="63" selection-start-line="81" selection-start-column="63" selection-end-line="81" selection-end-column="63" />
               <folding>
                 <element signature="e#1201#1202#0" expanded="true" />
                 <element signature="e#1233#1234#0" expanded="true" />
-                <element signature="e#7481#7482#0" expanded="true" />
+                <element signature="e#5834#5835#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,7 +101,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550063753887" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550065460007" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -145,7 +142,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550013504875</updated>
-      <workItem from="1550013509091" duration="23827000" />
+      <workItem from="1550013509091" duration="25532000" />
     </task>
     <task id="LOCAL-00001" summary="reg commit part 3">
       <created>1550051298351</created>
@@ -196,11 +193,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550057824212</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="commit info list_projects template">
+      <created>1550063789394</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550063789394</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23827000" />
+    <option name="totallyTimeSpent" value="25532000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -250,7 +254,8 @@
     <MESSAGE value="reg commit final 1" />
     <MESSAGE value="commit info start" />
     <MESSAGE value="commit info start 0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit info start 0.1" />
+    <MESSAGE value="commit info list_projects template" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit info list_projects template" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/abstr/BotUserDao.java">
@@ -680,12 +685,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bot/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="82" column="60" selection-start-line="82" selection-start-column="60" selection-end-line="82" selection-end-column="60" />
+        <state relative-caret-position="212">
+          <caret line="81" column="63" selection-start-line="81" selection-start-column="63" selection-end-line="81" selection-end-column="63" />
           <folding>
             <element signature="e#1201#1202#0" expanded="true" />
             <element signature="e#1233#1234#0" expanded="true" />
-            <element signature="e#7481#7482#0" expanded="true" />
+            <element signature="e#5834#5835#0" expanded="true" />
           </folding>
         </state>
       </provider>
