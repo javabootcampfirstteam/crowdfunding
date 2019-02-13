@@ -1,5 +1,8 @@
 import dao.impl.BotUserDaoImpl;
+import dao.impl.ProjectDaoImpl;
+import keyboard.KeyboardFactory;
 import model.BotUser;
+import model.Project;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.api.objects.Venue;
@@ -20,12 +23,12 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import storage.Storage;
 
 import java.io.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import static storage.Storage.COMMAND_LIST;
-import static storage.Storage.PROJECTS_TABLE;
-import static storage.Storage.USERS_TABLE;
+import static storage.Storage.*;
 
 
 public class UrbanSocializerBot extends TelegramLongPollingBot implements Serializable {
@@ -47,6 +50,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 
 	public void onUpdateReceived(Update update) {
 
+		List<String> currentContext = new ArrayList<>();
 		Message message = update.getMessage();
 
 		if (message != null & message.hasText()) {
@@ -66,7 +70,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 
 
 				BotUser currentUser = botUserService.getUser(currentUserId);
-				List<String> currentContext = currentUser.getContext();
+				currentContext = currentUser.getContext();
 
 
 				if (currentContext.isEmpty()) {
@@ -110,6 +114,36 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 						case "/list_activities": {
 							// проверка роли
 							sendMsg(currentChatId, "список");
+							break;
+						}
+						case "show_active_projects": {
+							ProjectDaoImpl projectDao = new ProjectDaoImpl();
+
+							//projectDao.getProjectById()
+							break;
+						}
+						case "add_projects": {
+							ProjectDaoImpl projectDao = new ProjectDaoImpl();
+                            Project project = new Project();
+
+							LocalDateTime localDateTime = LocalDateTime.now();
+							project.setProjectName(messageFromTelegram);
+                            project.setProjectDateCreate(localDateTime);
+                            project.setAuthorName("Petr");
+                            project.setProjectDescription(messageFromTelegram);
+                            project.setProjectId(project.getProjectId());
+                            project.setAuthorSurname("Hardcock");
+                            project.setProjectSum(2323);
+                            PROJECT_ID++;
+							projectDao.addProject(project, PROJECT_ID);
+
+							break;
+						}
+						case "test_kf": {
+							KeyboardFactory keyboardFactory = new KeyboardFactory();
+							keyboardFactory.createKeyboardRow(2,3,true,true,true, "test1", "test2", "test3");
+
+							//projectDao.getProjectById()
 							break;
 						}
 
@@ -177,7 +211,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 			e.printStackTrace();
 		}
 	}
-
+	//private void getProjectList(int indexFrom, int indexTo){ }
 	public String getBotUsername() {
 		return BOT_NAME;
 	}

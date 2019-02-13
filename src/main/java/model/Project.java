@@ -95,4 +95,20 @@ public class Project {
 	public void setProjectDateEnd(LocalDateTime projectDateEnd) {
 		this.projectDateEnd = projectDateEnd;
 	}
+
+	@Override
+	public String toString() {
+		return "Project{" +
+				"projectName='" + projectName + '\'' +
+				", projectDescription='" + projectDescription + '\'' +
+				", projectDateCreate=" + projectDateCreate +
+				", projectDateEnd=" + projectDateEnd +
+				", projectSum=" + projectSum +
+				", projectCurrentSum=" + projectCurrentSum +
+				", projectPhoto='" + projectPhoto + '\'' +
+				", projectId=" + projectId +
+				", authorName='" + authorName + '\'' +
+				", authorSurname='" + authorSurname + '\'' +
+				'}';
+	}
 }
