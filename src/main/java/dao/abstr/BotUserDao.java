@@ -3,6 +3,10 @@ package dao.abstr;
 import model.BotUser;
 
 public interface BotUserDao {
-    BotUser getBotUserById(int i);
-    void addUser (BotUser botUser, Integer id);
+
+    BotUser getBotUserById(int id);
+
+    void addBotUser(int id, BotUser botUser);
+
+    BotUser[] getAllUsers();
 }

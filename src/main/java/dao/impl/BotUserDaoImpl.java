@@ -4,25 +4,31 @@ import dao.abstr.BotUserDao;
 import model.BotUser;
 import storage.Storage;
 
-//а все вместе это такой способ проектирования приложений: Паттерн Синглтон.
 public class BotUserDaoImpl implements BotUserDao {
-        private BotUserDaoImpl() {}
-        private static BotUserDaoImpl instance;
-        public static BotUserDaoImpl getInstance(){
-            if (instance == null) {
-                instance = new BotUserDaoImpl();
-            }
-            return instance;
+    private static BotUserDaoImpl instance;
+
+    public static BotUserDaoImpl getInstance() {
+        if (instance == null) {
+            instance = new BotUserDaoImpl();
         }
+        return instance;
+    }
+
+    private BotUserDaoImpl() {
+    }
 
     @Override
-    public BotUser getBotUserById(int i) {
+    public BotUser getBotUserById(int id) {
+        return Storage.USERS_TABLE.get(id);
+    }
+
+    @Override
+    public void addBotUser(int id, BotUser botUser) {
+        Storage.USERS_TABLE.put(id,botUser);
+    }
+
+    @Override
+    public BotUser[] getAllUsers() {
         return null;
     }
-
-    @Override
-    public void addUser(BotUser botUser, Integer id) {
-        Storage.USERSTABLE.put(id,botUser);
-    }
-
 }

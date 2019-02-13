@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>urban.socializer.bot.com</groupId>
-    <artifactId>urban.socializer.bot</artifactId>
+    <groupId>kidinfo</groupId>
+    <artifactId>kidinfo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -13,8 +13,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <source>7</source>
+                    <target>7</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -22,9 +22,10 @@
 
     <dependencies>
         <dependency>
-        <groupId>org.telegram</groupId>
-        <artifactId>telegrambots</artifactId>
-        <version>4.1.2</version>
-    </dependency>
+            <groupId>org.telegram</groupId>
+            <artifactId>telegrambots</artifactId>
+            <version>4.1.2</version>
+        </dependency>
     </dependencies>
+
 </project>

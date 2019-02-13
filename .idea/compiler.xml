@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="urban.socializer.bot" />
+        <module name="kidinfo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="urban.socializer.bot" target="8" />
+      <module name="kidinfo" target="7" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,33 +1,29 @@
+import bot.Bot;
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
+import org.telegram.telegrambots.meta.ApiContext;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
-
-import java.io.IOException;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class Main {
 
+    private static String PROXY_HOST = "193.112.46.246";
+    private static Integer PROXY_PORT = 21071 ;
 
-	private static String PROXY_HOST = "5.8.18.84";
-	private static Integer PROXY_PORT = 16145;
+    public static void main(String[] args) {
+        ApiContextInitializer.init();
+        TelegramBotsApi botapi = new TelegramBotsApi();
 
+        DefaultBotOptions botOptions = ApiContext.getInstance(DefaultBotOptions.class);
+   //     botOptions.setProxyHost(PROXY_HOST);
+   //     botOptions.setProxyPort(PROXY_PORT);
+   //     botOptions.setProxyType(DefaultBotOptions.ProxyType.SOCKS5);
 
-	public static void main(String[] args) {
-		ApiContextInitializer.init();
-		TelegramBotsApi botsApi = new TelegramBotsApi();
+        try {
+            botapi.registerBot(new Bot(botOptions));
+        } catch (TelegramApiException ex) {
+            ex.printStackTrace();
+        }
+    }
 
-		DefaultBotOptions defaultBotOptions = new DefaultBotOptions();
-		defaultBotOptions.setProxyHost(PROXY_HOST);
-		defaultBotOptions.setProxyPort(PROXY_PORT);
-		defaultBotOptions.setProxyType(DefaultBotOptions.ProxyType.SOCKS5);
-		try{
-			botsApi.registerBot(new UrbanSocializerBot(defaultBotOptions));
-
-		}
-		catch (TelegramApiRequestException e){
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
 }
