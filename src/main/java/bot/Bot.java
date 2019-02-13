@@ -50,7 +50,7 @@ public class Bot extends TelegramLongPollingBot {
             if ("/start".equals(messageFromTelegram)) {
                 if (!botUserService.isUserExistById(currentUserId)) {
                     botUserService.addUser(currentUserId, new BotUser(telegramUserName));
-                    sendMsg(currentChatId, "Добрый день, вы впервые у нас, добавляем вас в базу\n");
+                    sendMsg(currentChatId, "Добрый день, вы впервые у нас, добавляем вас в базу\n" );
                 } else {
                     sendMsg(currentChatId, "Привет " + telegramUserName + ", Мы уже знакомы с вами!");
                 }
