@@ -69,8 +69,10 @@ public class Bot extends TelegramLongPollingBot {
                             break;
                         }
                         case "/info": {
-                            sendMsg(currentChatId, "Информация 1");
-                            currentContext.add("/infoSelect");
+                            sendMsg(currentChatId, "Добро пожаловать.\n " +
+                                    "Здесь вы можете предложить свой проект по улучшению городской или районной инфраструктуры. /add_project\n"
+                            +" или ознакомится с текущими предложениями. /list_project");
+                            //currentContext.add("/infoSelect");
                             break;
                         }
                     }
