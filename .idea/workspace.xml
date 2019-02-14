@@ -4,6 +4,7 @@
     <list default="true" id="86167d30-2a83-49be-a330-14bc8119e6ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UrbanSocializerBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UrbanSocializerBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/BotUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/BotUser.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +27,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/UrbanSocializerBot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="187" column="52" selection-start-line="187" selection-start-column="52" selection-end-line="187" selection-end-column="72" />
+            <state relative-caret-position="303">
+              <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
               <folding>
                 <element signature="e#1841#1842#0" expanded="true" />
-                <element signature="e#8714#8715#0" expanded="true" />
+                <element signature="e#9336#9337#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/model/BotUser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -62,10 +63,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/model/BotUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/impl/BotUserDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/abstr/ProjectDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/BotUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/UrbanSocializerBot.java" />
       </list>
     </option>
@@ -128,6 +129,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="urban.socializer.bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -141,7 +150,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550143392391" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550146330837" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -180,7 +189,7 @@
       <option name="presentableId" value="Default" />
       <updated>1550074945932</updated>
       <workItem from="1550074952096" duration="5236000" />
-      <workItem from="1550130607002" duration="9400000" />
+      <workItem from="1550130607002" duration="11963000" />
     </task>
     <task id="LOCAL-00001" summary="after merge">
       <created>1550079421630</created>
@@ -210,11 +219,25 @@
       <option name="project" value="LOCAL" />
       <updated>1550141270968</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="14.02 1.1">
+      <created>1550143473167</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1550143473167</updated>
+    </task>
+    <task id="LOCAL-00006" summary="14.02 1.1">
+      <created>1550143504171</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1550143504171</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14636000" />
+    <option name="totallyTimeSpent" value="17199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -260,7 +283,8 @@
     <MESSAGE value="after merge" />
     <MESSAGE value="after merge 0.2" />
     <MESSAGE value="14.02 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="14.02 1.0" />
+    <MESSAGE value="14.02 1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="14.02 1.1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/abstr/BotUserDao.java">
@@ -432,17 +456,17 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/model/BotUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UrbanSocializerBot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="187" column="52" selection-start-line="187" selection-start-column="52" selection-end-line="187" selection-end-column="72" />
+        <state relative-caret-position="303">
+          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
           <folding>
             <element signature="e#1841#1842#0" expanded="true" />
-            <element signature="e#8714#8715#0" expanded="true" />
+            <element signature="e#9336#9337#0" expanded="true" />
           </folding>
         </state>
       </provider>

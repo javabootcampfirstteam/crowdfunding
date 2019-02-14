@@ -48,34 +48,28 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 	}
 
 	///////////////-=================================================
-
+	////////Методы для сохранения и загрузки данных из storage.USERS_TABLE
 	Map<Integer, BotUser> mapSave = USERS_TABLE ;
 	private static final String PATH = "C:\\git\\file.txt";
 
-	//public void saveFile(Map<Integer, BotUser> mapSave)
 	public void saveFile()
 			throws IOException
 	{
 		try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(PATH))) {
 			os.writeObject(mapSave);
+			os.close();
+			System.out.println("HashMap data is saved.");
 		}
 	}
 
 	public Map<Integer, BotUser> readFile()
-			throws ClassNotFoundException, IOException
-	{
+			throws ClassNotFoundException, IOException {
 		try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(PATH))) {
-			return (Map<Integer, BotUser>)is.readObject();
+			return USERS_TABLE = (Map<Integer, BotUser>) is.readObject();
 		}
 	}
 
 	/////////////////-==================================
-
-
-
-
-
-
 
 
 	public void onUpdateReceived(Update update) {
@@ -94,6 +88,13 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 			//здесть не прававельно создается екземпляр BotUser
 
 			if ("/start".equals(messageFromTelegram)) {
+				try {
+					readFile();
+				} catch (ClassNotFoundException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 
 				if (!botUserService.isUserExistById(currentUserId)) {
 					botUserService.addUser(new BotUser(), currentUserId);
@@ -156,6 +157,24 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 							break;
 						}
 
+						case "/save": {
+							try {
+								saveFile();
+							} catch (IOException e) {
+								e.printStackTrace();
+							}
+							break;
+						}
+
+						case "/load": {
+							try {
+								readFile();
+							} catch (ClassNotFoundException | IOException e) {
+								e.printStackTrace();
+							}
+							break;
+						}
+
 						default: {
 							sendMsg(currentChatId, "неизвестная команда");
 						}
@@ -182,6 +201,8 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 												currentContext.clear();
 												sendMsg(currentChatId, "Благодарим за регистрацию. " +
 														"Теперь посмотрите что люди предлагают.\n /info");
+
+												//блок сохранения данных во внешний файл.
 												try {
 													saveFile();
 												} catch (IOException e) {
@@ -190,7 +211,6 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 												break;
 											}
 											break;
-
 										}
 									}
 								}

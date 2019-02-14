@@ -1,9 +1,10 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BotUser {
+public class BotUser implements Serializable {
 
 	private Integer userId;
 	private String userName;
