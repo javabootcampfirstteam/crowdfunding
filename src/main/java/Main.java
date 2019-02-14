@@ -8,8 +8,8 @@ import java.io.IOException;
 public class Main {
 
 
-	private static String PROXY_HOST = "45.76.131.83";
-	private static Integer PROXY_PORT = 443;
+	private static String PROXY_HOST = "5.8.18.84";
+	private static Integer PROXY_PORT = 	25295;
 
 
 	public static void main(String[] args) {
@@ -17,8 +17,8 @@ public class Main {
 		TelegramBotsApi botsApi = new TelegramBotsApi();
 
 		DefaultBotOptions defaultBotOptions = new DefaultBotOptions();
-		defaultBotOptions.setProxyHost(PROXY_HOST);
-		defaultBotOptions.setProxyPort(PROXY_PORT);
+	defaultBotOptions.setProxyHost(PROXY_HOST);
+	defaultBotOptions.setProxyPort(PROXY_PORT);
 		defaultBotOptions.setProxyType(DefaultBotOptions.ProxyType.SOCKS5);
 		try{
 			botsApi.registerBot(new UrbanSocializerBot(defaultBotOptions));

@@ -17,7 +17,7 @@ public class BotUserDaoImpl implements BotUserDao {
 
     @Override
     public BotUser getBotUserById(int i) {
-        return null;
+        return Storage.USERS_TABLE.get(i);
     }
 
     @Override

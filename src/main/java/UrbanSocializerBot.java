@@ -25,16 +25,15 @@ import storage.Storage;
 import java.io.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import static storage.Storage.*;
 
 
 public class UrbanSocializerBot extends TelegramLongPollingBot implements Serializable {
 
-	private static final String BOT_NAME = "urban_socializer_bot";
-	public static final String BOT_TOKEN = "726296784:AAG70XT-URXz69YvwPaKNQDivImfZAmFCOQ";
+	private static final String BOT_NAME = "JBootCampFirst";
+	public static final String BOT_TOKEN = "779792105:AAE1riYVZ5npKvJFX0a5T_owWN2mE2bHKZk";
 	BotUserService botUserService = BotUserServiceImpl.getInstance();
 
 
@@ -48,9 +47,34 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 		return BOT_TOKEN;
 	}
 
+	///////////////-=================================================
+	////////Методы для сохранения и загрузки данных из storage.USERS_TABLE
+	Map<Integer, BotUser> mapSave = USERS_TABLE ;
+	private static final String PATH = "C:\\git\\file.txt";
+
+	public void saveFile()
+			throws IOException
+	{
+		try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(PATH))) {
+			os.writeObject(mapSave);
+			os.close();
+			System.out.println("HashMap data is saved.");
+		}
+	}
+
+	public Map<Integer, BotUser> readFile()
+			throws ClassNotFoundException, IOException {
+		try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(PATH))) {
+			return USERS_TABLE = (Map<Integer, BotUser>) is.readObject();
+		}
+	}
+
+	/////////////////-==================================
+
+
 	public void onUpdateReceived(Update update) {
 
-		List<String> currentContext;
+	//	List<String> currentContext;
 		Message message = update.getMessage();
 
 		if (message != null & message.hasText()) {
@@ -64,6 +88,14 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 			//здесть не прававельно создается екземпляр BotUser
 
 			if ("/start".equals(messageFromTelegram)) {
+				try {
+					readFile();
+				} catch (ClassNotFoundException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
 				if (!botUserService.isUserExistById(currentUserId)) {
 					botUserService.addUser(new BotUser(), currentUserId);
 					sendMsg(currentChatId, "Добрый день, вы впервые у нас, добавляем вас в базу\n");
@@ -75,7 +107,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 			}
 			else {
 				BotUser currentUser = botUserService.getUser(currentUserId);
-				currentContext = currentUser.getContext();
+				List<String> currentContext = currentUser.getContext();
 
 				if (currentContext.isEmpty()) {
 					switch (messageFromTelegram) {
@@ -87,19 +119,19 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 						case "/info": {
 							sendMsg(currentChatId, "Добро пожаловать.\n" +
 									"Здесь вы можете предложить свой проект " +
-									"по улучшению городской или районной инфраструктуры. /add_project\n"
-									+ "или ознакомится с текущими предложениями. /list_project");
+									"по улучшению городской или районной инфраструктуры. /add_projects\n"
+									+ "или ознакомится с текущими предложениями. /show_active_projects");
+							break;
 						}
 						case "/show_active_projects": {
 							ProjectDaoImpl projectDao = new ProjectDaoImpl();
 
-							//projectDao.getProjectById()
+							//projectDao.getProjectById();
 							break;
 						}
-						case "add_projects": {
+						case "/add_projects": {
 							ProjectDaoImpl projectDao = new ProjectDaoImpl();
 							Project project = new Project();
-
 							LocalDateTime localDateTime = LocalDateTime.now();
 							project.setProjectName(messageFromTelegram);
 							project.setProjectDateCreate(localDateTime);
@@ -110,14 +142,36 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 							project.setProjectSum(2323);
 							PROJECT_ID++;
 							projectDao.addProject(project, PROJECT_ID);
-
 							break;
 						}
-						case "test_kf": {
+						case "/test_kf": {
 							KeyboardFactory keyboardFactory = new KeyboardFactory();
 							keyboardFactory.createKeyboardRow(2, 3, true, true, true, "test1", "test2", "test3");
 
 							//projectDao.getProjectById()
+							break;
+						}
+
+						case "/list_projects": {
+							sendMsg(currentChatId, "Здесь будут перечислены текущие проекты.");
+							break;
+						}
+
+						case "/save": {
+							try {
+								saveFile();
+							} catch (IOException e) {
+								e.printStackTrace();
+							}
+							break;
+						}
+
+						case "/load": {
+							try {
+								readFile();
+							} catch (ClassNotFoundException | IOException e) {
+								e.printStackTrace();
+							}
 							break;
 						}
 
@@ -127,7 +181,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 
 					}
 				}
-				else if(currentContext.isEmpty()) {
+				else  {
 						switch (currentContext.get(contextPosition)) {
 							case "/regCity": {
 								if (currentContext.size() == ++contextPosition) {
@@ -147,16 +201,19 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 												currentContext.clear();
 												sendMsg(currentChatId, "Благодарим за регистрацию. " +
 														"Теперь посмотрите что люди предлагают.\n /info");
+
+												//блок сохранения данных во внешний файл.
+												try {
+													saveFile();
+												} catch (IOException e) {
+													e.printStackTrace();
+												}
+												break;
 											}
 											break;
 										}
 									}
 								}
-								break;
-							}
-
-							case "/list_project": {
-								sendMsg(currentChatId, "Здесь будут перечислены текущие проекты.");
 								break;
 							}
 
@@ -229,7 +286,9 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 	public String getBotUsername() {
 		return BOT_NAME;
 	}
-}
 
+
+
+}
 
 
