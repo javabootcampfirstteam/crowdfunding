@@ -47,6 +47,37 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 		return BOT_TOKEN;
 	}
 
+	///////////////-=================================================
+
+	Map<Integer, BotUser> mapSave = USERS_TABLE ;
+	private static final String PATH = "C:\\git\\file.txt";
+
+	//public void saveFile(Map<Integer, BotUser> mapSave)
+	public void saveFile()
+			throws IOException
+	{
+		try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(PATH))) {
+			os.writeObject(mapSave);
+		}
+	}
+
+	public Map<Integer, BotUser> readFile()
+			throws ClassNotFoundException, IOException
+	{
+		try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(PATH))) {
+			return (Map<Integer, BotUser>)is.readObject();
+		}
+	}
+
+	/////////////////-==================================
+
+
+
+
+
+
+
+
 	public void onUpdateReceived(Update update) {
 
 	//	List<String> currentContext;
@@ -151,7 +182,11 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 												currentContext.clear();
 												sendMsg(currentChatId, "Благодарим за регистрацию. " +
 														"Теперь посмотрите что люди предлагают.\n /info");
-												//saveFile();
+												try {
+													saveFile();
+												} catch (IOException e) {
+													e.printStackTrace();
+												}
 												break;
 											}
 											break;
@@ -230,31 +265,6 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 	public String getBotUsername() {
 		return BOT_NAME;
 	}
-
-
-	Map<Integer, String> mapSave = new HashMap<>();
-
-	private static final String PATH = "C:\\git\\file.txt";
-
-
-	public void saveFile(HashMap<Integer, String> mapSave)
-			throws IOException
-	{
-		try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(PATH))) {
-			os.writeObject(mapSave);
-		}
-	}
-
-	public HashMap<Integer, String> readFile()
-			throws ClassNotFoundException, IOException
-	{
-		try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(PATH))) {
-			return (HashMap<Integer, String>) is.readObject();
-		}
-	}
-
-
-
 
 
 
