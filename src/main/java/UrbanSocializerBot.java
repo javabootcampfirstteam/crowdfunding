@@ -25,8 +25,7 @@ import storage.Storage;
 import java.io.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import static storage.Storage.*;
 
@@ -64,6 +63,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 			//здесть не прававельно создается екземпляр BotUser
 
 			if ("/start".equals(messageFromTelegram)) {
+
 				if (!botUserService.isUserExistById(currentUserId)) {
 					botUserService.addUser(new BotUser(), currentUserId);
 					sendMsg(currentChatId, "Добрый день, вы впервые у нас, добавляем вас в базу\n");
@@ -89,6 +89,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 									"Здесь вы можете предложить свой проект " +
 									"по улучшению городской или районной инфраструктуры. /add_projects\n"
 									+ "или ознакомится с текущими предложениями. /show_active_projects");
+							break;
 						}
 						case "/show_active_projects": {
 							ProjectDaoImpl projectDao = new ProjectDaoImpl();
@@ -150,6 +151,8 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 												currentContext.clear();
 												sendMsg(currentChatId, "Благодарим за регистрацию. " +
 														"Теперь посмотрите что люди предлагают.\n /info");
+												//saveFile();
+												break;
 											}
 											break;
 										}
@@ -227,7 +230,34 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 	public String getBotUsername() {
 		return BOT_NAME;
 	}
-}
 
+
+	Map<Integer, String> mapSave = new HashMap<>();
+
+	private static final String PATH = "C:\\git\\file.txt";
+
+
+	public void saveFile(HashMap<Integer, String> mapSave)
+			throws IOException
+	{
+		try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(PATH))) {
+			os.writeObject(mapSave);
+		}
+	}
+
+	public HashMap<Integer, String> readFile()
+			throws ClassNotFoundException, IOException
+	{
+		try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(PATH))) {
+			return (HashMap<Integer, String>) is.readObject();
+		}
+	}
+
+
+
+
+
+
+}
 
 
