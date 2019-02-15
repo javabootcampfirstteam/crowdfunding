@@ -95,6 +95,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 		try {
 			setButtons(sendMessageButton);
 			execute(sendMessageButton);
+
 		} catch (TelegramApiException e) {
 			e.printStackTrace();
 		}
@@ -194,7 +195,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 									"Здесь вы можете предложить свой проект " +
 									"по улучшению городской или районной инфраструктуры. /add_projects\n"
 									+ "или ознакомится с текущими предложениями. /show_active_projects");
-							sendMsgButton(currentChatId, "/add_projects\n");
+							sendMsgButton(currentChatId, "/add_projects");
 							sendMsgButton2(currentChatId, "/show_active_projects");
 							break;
 						}
