@@ -5,22 +5,31 @@ import model.Project;
 import storage.Storage;
 
 public class ProjectDaoImpl implements ProjectDao{
-	public static ProjectDaoImpl instance;
-	ProjectDaoImpl getInstance(){
+	private static ProjectDaoImpl instance;
+
+	public  static ProjectDaoImpl getInstance(){
 	if (instance == null) {
 		instance = new ProjectDaoImpl();
 	}
             return instance;
-}
-
-	@Override
-	public Project getProjectById(long id) {
-		return null;
 	}
 
-	@Override
-	public void addProject(Project project, Integer id) {
-		Storage.PROJECTS_TABLE.put(id, project);
+	private ProjectDaoImpl() {
 
+	}
+
+
+
+	@Override
+	public Project getProjectById(Integer id) {
+		return Storage.PROJECTS_TABLE.get(id);
+	}
+
+
+
+
+	@Override
+	public void addProject(Project project) {
+		Storage.PROJECTS_TABLE.put(Storage.PROJECT_ID, project);
 	}
 }

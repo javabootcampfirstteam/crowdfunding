@@ -9,7 +9,7 @@ public class Main {
 
 
 	private static String PROXY_HOST = "5.8.18.84";
-	private static Integer PROXY_PORT =		32458;
+	private static Integer PROXY_PORT =	28839;
 
 
 	public static void main(String[] args) {

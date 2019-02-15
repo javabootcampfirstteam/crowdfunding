@@ -33,15 +33,8 @@ public class BotUserServiceImpl implements BotUserService {
 
 	@Override
 	public boolean isUserExistById(Integer id) {
-		if(botUserDao.getBotUserById(id)!= null ){
-			return true;
-		}
-		return false;
+		return botUserDao.getBotUserById(id) != null;
 	}
 
-	@Override
-	public Integer getUserContextById(BotUser botUser) {
-		return botUser.getUserId();
-	}
 
 }

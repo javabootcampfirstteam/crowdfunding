@@ -3,22 +3,22 @@ package model;
 import java.time.LocalDateTime;
 
 public class Project {
-	private String projectName;
-	private String projectDescription;
-	private LocalDateTime projectDateCreate;
-	private LocalDateTime projectDateEnd;
-	private double projectSum;
-	private double projectCurrentSum;
-	private String projectPhoto;
+	//Название
+	private String name;
+	private String description;
+	private LocalDateTime createDate;
+	private double allSum;
+	private double currentSum;
+	private String photo;
 	private long projectId;
-	private String authorName;
+	private Integer authorId;
 
-	public String getAuthorName() {
-		return authorName;
+	public int getAuthorId() {
+		return authorId;
 	}
 
-	public void setAuthorName(String authorName) {
-		this.authorName = authorName;
+	public void setAuthorId(int authorId) {
+		this.authorId = authorId;
 	}
 
 	public String getAuthorSurname() {
@@ -40,75 +40,52 @@ public class Project {
 		this.projectId = projectId;
 	}
 
-	public String getProjectName() {
-		return projectName;
+	public String getTitle() {
+		return name;
 	}
 
-	public void setProjectName(String projectName) {
-		this.projectName = projectName;
+	public void setTitle(String name) {
+		this.name = name;
 	}
 
-	public String getProjectDescription() {
-		return projectDescription;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setProjectDescription(String projectDescription) {
-		this.projectDescription = projectDescription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public LocalDateTime getProjectDateCreate() {
-		return projectDateCreate;
+	public LocalDateTime getCreateDate() {
+		return createDate;
 	}
 
-	public void setProjectDateCreate(LocalDateTime projectDateCreate) {
-		this.projectDateCreate = projectDateCreate;
+	public void setCreateDate(LocalDateTime createDate) {
+		this.createDate = createDate;
 	}
 
-	public double getProjectSum() {
-		return projectSum;
+	public double getAllSum() {
+		return allSum;
 	}
 
-	public void setProjectSum(double projectSumm) {
-		this.projectSum = projectSumm;
+	public void setAllSum(double projectSumm) {
+		this.allSum = projectSumm;
 	}
 
-	public double getProjectCurrentSum() {
-		return projectCurrentSum;
+	public double getCurrentSum() {
+		return currentSum;
 	}
 
-	public void setProjectCurrentSum(double projectCurrentSumm) {
-		this.projectCurrentSum = projectCurrentSumm;
+	public void setCurrentSum(double projectCurrentSumm) {
+		this.currentSum = projectCurrentSumm;
 	}
 
-	public String getProjectPhoto() {
-		return projectPhoto;
+	public String getPhoto() {
+		return photo;
 	}
 
-	public void setProjectPhoto(String projectPhoto) {
-		this.projectPhoto = projectPhoto;
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 
-	public LocalDateTime getProjectDateEnd() {
-		return projectDateEnd;
-	}
-
-	public void setProjectDateEnd(LocalDateTime projectDateEnd) {
-		this.projectDateEnd = projectDateEnd;
-	}
-
-	@Override
-	public String toString() {
-		return "Project{" +
-				"projectName='" + projectName + '\'' +
-				", projectDescription='" + projectDescription + '\'' +
-				", projectDateCreate=" + projectDateCreate +
-				", projectDateEnd=" + projectDateEnd +
-				", projectSum=" + projectSum +
-				", projectCurrentSum=" + projectCurrentSum +
-				", projectPhoto='" + projectPhoto + '\'' +
-				", projectId=" + projectId +
-				", authorName='" + authorName + '\'' +
-				", authorSurname='" + authorSurname + '\'' +
-				'}';
-	}
 }
