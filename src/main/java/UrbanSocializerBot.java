@@ -60,12 +60,15 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 				if (!botUserService.isUserExistById(currentUserId)) {
 					botUserService.addUser(new BotUser(), currentUserId);
 				}
-				sendMsg(currentChatId, "Добрый день\n");
+			//	sendMsg(currentChatId, "Добрый день\n");
 				BotUser currentUser = botUserService.getUser(currentUserId);
 
-				StringBuilder firstMessage = new StringBuilder("/reg - регистрация\n/info - информация\n/active_projects - проекты\n");
+				StringBuilder firstMessage = new StringBuilder("Добрый день. Похоже вы у нас впервые.\n " +
+						"Зарегестрируйтесь пожалуйста.");
+				sendMsgButton(currentChatId,"Регистрация");
+
 				if (currentUser.isRegCompleated()) {
-					firstMessage.append("/add_project - добавить проект");
+					firstMessage.append("Добавить проект");
 				}
 					sendMsg(currentChatId, firstMessage.toString());
 
@@ -75,19 +78,19 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 
 				if (currentContext.isEmpty()) {
 					switch (messageFromTelegram) {
-						case "/reg": {
-							sendMsg(currentChatId, "Регистрация.");
+						case "Регистрация": {
+						//	sendMsg(currentChatId, "Регистрация.");
 							sendMsg(currentChatId, "Пожалуйста, укажите ваш адрес.");
 							currentContext.add("/reg");
 							break;
 						}
-						case "/info": {
+						case "Информация": {
 							sendMsg(currentChatId, "Добро пожаловать.\n" +
-									"Здесь вы можете предложить свой проект " +
-									"по улучшению городской или районной инфраструктуры.");
+									"Здесь вы можете предложить свой проект\n ");
+							sendMsgButton3(currentChatId,"по улучшению городской или районной инфраструктуры.");
 							break;
 						}
-						case "/active_projects": {
+						case "Список проектов": {
 							for (Map.Entry<Integer, Project> entry:
 								 Storage.PROJECTS_TABLE.entrySet()) {
 								sendMsg(currentChatId,"Название: " + entry.getValue().getTitle() +"\n"
@@ -104,7 +107,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 							}
 							break;
 						}
-						case "/add_project": {
+						case "Добавить проект": {
 							if (currentUser.isRegCompleated()){
 								sendMsg(currentChatId, "Добавление проекта");
 								sendMsg(currentChatId, "Введите название для вашего проекта");
@@ -123,7 +126,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 							if (currentContext.size() <= (contextPosition + 1)) {
 								BotUser user = botUserService.getUser(currentUserId);
 								user.setAddress(messageFromTelegram);
-								sendMsg(currentChatId, "Введите имя:");
+								sendMsg(currentChatId, "Введите ваше имя:");
 								currentContext.add("/name");
 							} else {
 								switch (currentContext.get(++contextPosition)) {
@@ -132,7 +135,7 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 										if (currentContext.size() <= (contextPosition + 1)) {
 											BotUser user = botUserService.getUser(currentUserId);
 											user.setName(messageFromTelegram);
-											sendMsg(currentChatId, "Введите номер:");
+											sendMsg(currentChatId, "Пожалуйста укажите ваш телефонный номер:");
 											currentContext.add("/number");
 										} else {
 
@@ -142,8 +145,9 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 													user.setPhoneNumber(messageFromTelegram);
 													user.setRegCompleated(true);
 													currentContext.clear();
-													sendMsg(currentChatId, "Регистрация окончена.");
-													sendMsg(currentChatId, "/info - информация\n/active_projects - проекты");
+												//	sendMsg(currentChatId, "Регистрация завершена.");
+													//sendMsg(currentChatId, "/info - информация\n/active_projects - проекты");
+													sendMsgButton3(currentChatId,"Регистрация завершена.");
 													break;
 												}
 												default: {
@@ -201,9 +205,10 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 															case "/photo": {
 																Project project = projectService.getProjectById(extractId(currentContext.get(contextPosition)));
 																project.setPhoto(message.getPhoto().get(0).getFileId());
-																sendMsg(currentChatId,"Добавление проекта завершено.");
+																//sendMsg(currentChatId,"Добавление проекта завершено.");
 
-																sendMsg(currentChatId,"/reg - регистрация\n/info - информация\n/active_projects - проекты\n/add_project - добавить проект");
+																//sendMsg(currentChatId,"/info - информация\n/active_projects - проекты\n/add_project - добавить проект");
+																sendMsgButton3(currentChatId,"Регистрация завершена.");
 																currentContext.clear();
 																break;
 															}
@@ -328,8 +333,9 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 		replyKeyboardMarkup2.setOneTimeKeyboard(false);
 
 		KeyboardRow keyboardFirstRow = new KeyboardRow();
-		keyboardFirstRow.add(new KeyboardButton("/add_project"));
-		keyboardFirstRow.add(new KeyboardButton("/show_active_projects"));
+		keyboardFirstRow.add(new KeyboardButton("Регистрация"));
+		keyboardFirstRow.add(new KeyboardButton("Информация"));
+		keyboardFirstRow.add(new KeyboardButton("Список проектов"));
 
 		keyboard.add(keyboardFirstRow);
 		replyKeyboardMarkup2.setKeyboard(keyboard);
@@ -348,6 +354,43 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 			e.printStackTrace();
 		}
 	}
+
+	public synchronized void setButtons3(SendMessage sMessage3) {
+		ReplyKeyboardMarkup replyKeyboardMarkup3 = new ReplyKeyboardMarkup();
+		List<KeyboardRow> keyboard3 = new ArrayList<>();
+
+		sMessage3.setReplyMarkup(replyKeyboardMarkup3);
+		replyKeyboardMarkup3.setSelective(true);
+		replyKeyboardMarkup3.setResizeKeyboard(true);
+		replyKeyboardMarkup3.setOneTimeKeyboard(false);
+
+		KeyboardRow keyboardRow3 = new KeyboardRow();
+		keyboardRow3.add(new KeyboardButton("Информация"));
+		keyboardRow3.add(new KeyboardButton("Список проектов"));
+		keyboardRow3.add(new KeyboardButton("Добавить проект"));
+
+		keyboard3.add(keyboardRow3);
+		replyKeyboardMarkup3.setKeyboard(keyboard3);
+	}
+
+	private void sendMsgButton3(Long chatId3, String buttonText3) {
+		SendMessage sendMessageButton3 = new SendMessage();
+		sendMessageButton3.enableMarkdown(false);
+		sendMessageButton3.setChatId(chatId3);
+		sendMessageButton3.setText(buttonText3);
+
+		try {
+			setButtons3(sendMessageButton3);
+			execute(sendMessageButton3);
+		} catch (TelegramApiException e) {
+			e.printStackTrace();
+		}
+	}
+
+
+
+
+
 
 
 	////////////----==============================
