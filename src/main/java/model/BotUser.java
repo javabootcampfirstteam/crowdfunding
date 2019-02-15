@@ -1,47 +1,37 @@
 package model;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BotUser implements Serializable {
+public class BotUser {
 
-	private Integer userId;
-	private String userName;
-	private String userAddress;
-	private int phoneNumber;
-
-	public int getPhoneNumber() { return phoneNumber;
-	}
-
-	public void setPhoneNumber(int phoneNumber) { this.phoneNumber = phoneNumber;
-	}
-
+	private String name;
+	private String address;
+	private String phoneNumber;
+	private boolean isRegCompleted;
 	private List<String> context = new ArrayList<>();
-	private boolean notificationModeOn;
 
-	public Integer getUserId() {
-		return userId;
+
+	public String getPhoneNumber() { return phoneNumber;
 	}
 
-	public void setUserId(Integer userId) {
-		this.userId = userId;
+	public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getName() {
+		return name;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getUserAddress() {
-		return userAddress;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setUserAddress(String userAddress) {
-		this.userAddress = userAddress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public List<String> getContext() {
@@ -52,11 +42,11 @@ public class BotUser implements Serializable {
 		this.context = context;
 	}
 
-	public boolean isNotificationModeOn() {
-		return notificationModeOn;
+	public boolean isRegCompleated() {
+		return isRegCompleted;
 	}
 
-	public void setNotificationModeOn(boolean notificationModeOn) {
-		this.notificationModeOn = notificationModeOn;
+	public void setRegCompleated(boolean regComplited) {
+		isRegCompleted = regComplited;
 	}
 }

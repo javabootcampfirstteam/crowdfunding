@@ -10,7 +10,7 @@ public class Project {
 	private double allSum;
 	private double currentSum;
 	private String photo;
-	private long projectId;
+	private int projectId;
 	private Integer authorId;
 
 	public int getAuthorId() {
@@ -32,11 +32,11 @@ public class Project {
 	private String authorSurname;
 
 
-	public long getProjectId() {
+	public int getProjectId() {
 		return projectId;
 	}
 
-	public void setProjectId(long projectId) {
+	public void setProjectId(int projectId) {
 		this.projectId = projectId;
 	}
 

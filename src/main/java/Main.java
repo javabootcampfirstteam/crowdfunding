@@ -9,7 +9,7 @@ public class Main {
 
 
 	private static String PROXY_HOST = "5.8.18.84";
-	private static Integer PROXY_PORT =	28839;
+	private static Integer PROXY_PORT = 		28357;
 
 
 	public static void main(String[] args) {
@@ -17,17 +17,19 @@ public class Main {
 		TelegramBotsApi botsApi = new TelegramBotsApi();
 
 		DefaultBotOptions defaultBotOptions = new DefaultBotOptions();
-	defaultBotOptions.setProxyHost(PROXY_HOST);
-	defaultBotOptions.setProxyPort(PROXY_PORT);
+		defaultBotOptions.setProxyHost(PROXY_HOST);
+		defaultBotOptions.setProxyPort(PROXY_PORT);
 		defaultBotOptions.setProxyType(DefaultBotOptions.ProxyType.SOCKS5);
 		try{
 			botsApi.registerBot(new UrbanSocializerBot(defaultBotOptions));
-
 		}
 		catch (TelegramApiRequestException e){
 			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
+
+
 	}
+
+
+
 }

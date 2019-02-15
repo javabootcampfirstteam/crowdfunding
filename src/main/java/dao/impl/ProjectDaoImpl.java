@@ -30,6 +30,6 @@ public class ProjectDaoImpl implements ProjectDao{
 
 	@Override
 	public void addProject(Project project) {
-		Storage.PROJECTS_TABLE.put(Storage.PROJECT_ID, project);
+		Storage.PROJECTS_TABLE.put(project.getProjectId(), project);
 	}
 }
