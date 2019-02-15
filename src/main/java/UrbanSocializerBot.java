@@ -113,9 +113,9 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 		replyKeyboardMarkup2.setOneTimeKeyboard(false);
 
 		KeyboardRow keyboardFirstRow = new KeyboardRow();
-		keyboardFirstRow.add(new KeyboardButton(sendMessage2.getText()));
+		keyboardFirstRow.add(new KeyboardButton("/add_projects"));
 		KeyboardRow keyboardSecondRow = new KeyboardRow();
-		keyboardSecondRow.add(new KeyboardButton(sendMessage2.getText()));
+		keyboardFirstRow.add(new KeyboardButton("/show_active_projects"));
 
 		keyboard.add(keyboardFirstRow);
 		keyboard.add(keyboardSecondRow);
@@ -135,10 +135,6 @@ public class UrbanSocializerBot extends TelegramLongPollingBot implements Serial
 			e.printStackTrace();
 		}
 	}
-
-
-
-
 
 
 	////////////----==============================
